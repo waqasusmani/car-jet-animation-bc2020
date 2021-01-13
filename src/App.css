@@ -1,38 +1,241 @@
-.App {
-  text-align: center;
+body {
+  width: 100vw;
+  overflow: hidden;
+  background-image: url(./images/roadsky.jpg);
+  background-size: 100% 100%;
+  background-position: center;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h3 {
+  text-align: right;
+  margin-right: 10vw;
+  visibility: hidden;
+  color: red;
+  animation-name: blink;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@keyframes blink {
+  0% {color:red}
+  50% {color: blue}
+  100% {color: green}
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+
+.clouds {
+  position: absolute;
+  width: 7.5vw;
+  height: 7.5vh;
+}
+
+#cloud1 {
+  top: 15vh;
+  
+}
+
+#cloud2 {
+  top:10vh;
+  
+}
+
+#cloud3 {
+  top: 5vh;
+  
+}
+
+#cloud4 {
+  top: 12.5vh;
+
+}
+
+.trees, .trees-next {
+  position: absolute;
+  height: 15vh;
+}
+
+#tree1 {
+  top:50vh;
+  left:10vw;
+}
+
+#tree2 {
+  top:60vh;
+  left:30vw;
+}
+
+#tree3 {
+  top:55vh;
+  left:55vw;
+}
+
+#tree4 {
+  top:62.5vh;
+  left:90vw;
+}
+
+#tree5 {
+  top:45vh;
+  left:110vw;
+}
+
+#tree6 {
+  top:65vh;
+  left:175vw;
+}
+
+.road-lines, .road-lines-next {
+  top: 90vh;
+  position: absolute;
+  width: 5vw;
   color: white;
+  background-color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#rl2 {
+  left: 15vw;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#rl3 {
+  left: 30vw;
+}
+
+#rl4 {
+  left: 45vw;
+}
+
+#rl5 {
+  left: 60vw;
+}
+
+#rl6 {
+  left: 75vw;
+}
+
+#rl7 {
+  left: 90vw;
+}
+
+#rl8 {
+  left: 15vw;
+}
+
+#rl9 {
+  left:30vw;
+}
+
+#rl10 {
+  left:45vw;
+}
+
+#rl11 {
+  left: 60vw;
+}
+
+#rl12 {
+  left: 75vw;
+}
+
+#rl13 {
+  left: 90vw;
+}
+
+#pjet {
+  position: absolute;
+  top: 10vh;
+  width: 30vw;
+  animation-name: pjetAnim;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  z-index: 1;
+}
+
+@keyframes pjetAnim {
+  0% {
+      top: 10vh
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+      top:11vh
   }
+  100%{
+      top:10vh
+  }
+}
+
+
+#pcar {
+  width: 15vw;
+  transition: 2s ease-in;
+  position: absolute;
+  bottom: 10vh;
+  left: 10vw;
+  animation-name: carAnim;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+}
+
+@keyframes carAnim {
+  0% {
+      bottom: 10vh
+  }
+  50% {
+      bottom:11vh
+  }
+  100%{
+      bottom:10vh
+  }
+}
+
+#ecar1 {
+  width:15vw;
+  right:-20vw;
+  transition: 2s linear;
+  position: absolute;
+  bottom:10vh;
+  animation-name: carAnim;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;   
+}
+
+#ecar2 {
+  width:15vw;
+  right:-20vw;
+  transition: 2s linear;
+  position: absolute;
+  bottom:10vh;
+  animation-name: carAnim;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  color: aliceblue;   
+}
+
+#missile {
+  height: 10vh;
+  width:10vw;
+  left:10vw;
+  top: 20vh;
+  position: absolute;
+  /* visibility: hidden; */
+  transition: 2s linear;
+}
+
+.missile-transition {
+  transition: 2s linear;
+}
+
+#explosion1 {
+  width: 20vw;
+  position: absolute;
+  left: 70vw;
+  top:60vh;
+  max-width: 0vw;
+}
+
+#explosion2 {
+  width: 20vw;
+  position: absolute;
+  left: 60vw;
+  top:60vh;
+  max-width: 0vw;
 }
